@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>name portfolio</title>
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            margin:0;
+            background-color: azure;
+        }
+        header{
+            background-color: #333;
+            color:aliceblue;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+        .header-content h1{
+            font-size: 2.5rem;
+        }
+        .profile-picture{
+            width: 100px;
+            height: 100px;
+            border-radius: 75%;
+            object-fit: cover;
+            position: absolute;
+            top: 75px;
+            left: 75px;
+
+        }
+        nav{
+            background-color: dimgrey;
+            color: azure;
+            text-align: center;
+        }
+        nav ul{
+            list-style-type: circle;
+            padding:0;
+        }
+        nav ul li{
+            display: inline;
+            margin: 20px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: antiquewhite;
+        }
+        .section-content{
+            background-color: blanchedalmond;
+            padding: 2rem;
+            margin: 1rem;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+        }
+        .download-button{
+            background-color:black;
+            color: white;
+            padding: 0,5rem,1rem;
+            text-decoration: none;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 10px;
+            font-size: large;
+        }
+        .download-button:hover{
+            background-color:cadetblue;
+        }
+        footer{
+            text-align: center;
+            padding: 1rem 0;
+            background-color: hsl(0, 9%, 25%);
+            color: #32e6b0;
+        }
+        ul{
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+        <img src="girl.jpeg"alt="your profile picture" class="profile-picture">
+        <h1>SUVETHA</h1>
+        <p>webpage developer</p>
+        </div>
+    </header>
+
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+    </ul>
+</nav>
+
+<section id="about">
+    <div class="section-content">
+        <h2>About me</h2>
+        <p>Hello Everyone! This is suvetha and I am a computer science student</p>
+    </div>
+</section>
+
+<section id="education">
+    <div class="section-content">
+        <h2>B.sc</h2>
+        <p>Government arts and science college</p>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="section-content">
+        <h2>skills</h2>
+        <ul>
+            <li>python</li>
+            <li>Machine learning</li>
+            <li>database</li>
+            <li>c++</li>
+        </ul>
+    </div>
+</section>
+
+<section id="Projects">
+    <div class="section-content">
+        <h2>Projects</h2>
+        <ul>
+            <li><a href="a">project1</a></li>
+        </ul>
+    </div>
+</section>
+
+<section id="resume">
+    <center>
+        <div class="section-content">
+            <h2>Resume</h2>
+            <a href="C:\Users\dell\OneDrive\Desktop\santy\santy2\profile\Resume7.docx" class="download-button">Download CV</a>
+        </div>
+    </center>
+</section>
+
+<footer>
+    <p>&COPY; 2023 suvetha</p>
+</footer>
+
+<script>
+    document.querySelectorAll('a[href="a"]').forEach(anchor =>{
+        anchor.addEventListener('click',function(e){
+            e.preventDefault();
+
+            const targetId=this.getAttribute('href').substring(1);
+            const targetElement=document.getElementById(targetId);
+
+            if(targetElement){
+                window.scrollTo({
+                    top:targetElement.offsetTop,
+                    behavior:'smooth'
+                })
+            }
+        })
+    })
+
+</script>
+</body>
+</html>
